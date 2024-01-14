@@ -25,6 +25,10 @@ aws eks update-kubeconfig --region us-east-1 --name eks-cluster
 echo "Variable1: ${access_key}"
 echo "Variable2: ${secret_key}"
 
+sudo apt-get update -y
+sudo apt-get install -y awscli
+aws s3 ls
+
 aws configure set aws_access_key_id ${access_key}
 aws configure set aws_secret_access_key ${secret_key}
 aws configure set default.region us-east-1
