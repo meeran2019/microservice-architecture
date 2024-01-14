@@ -1,17 +1,17 @@
-Terraform {
+terraform {
   cloud {
-	organization = “meeran-terraform-organization”
+	organization = "meeran-terraform-organization"
 	workspaces {
-  	name = “microservice-architecture”
+  	name = "microservice-architecture"
 	}
   }
   required_providers {
 	aws = {
-  	source  = “hashicorp/aws”
-  	version = “>= 3.73.0”
+  	source  = "hashicorp/aws"
+  	version = ">= 3.73.0"
 	}
 }
-
-provider “aws” {
+}
+provider "aws" {
   region = "us-east-1"
 }
