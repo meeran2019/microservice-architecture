@@ -1,7 +1,7 @@
 resource "aws_eks_node_group" "worker-node-group" {
   cluster_name  = aws_eks_cluster.eks-cluster.name
   node_group_name = "workernodes"
-  node_role_arn  = aws_iam_role.workernodes.arn
+  node_role_arn  = "arn:aws:iam::346464389794:role/eks-node-group-example"
   subnet_ids   = [var.subnet_id_1, var.subnet_id_2]
   instance_types = ["t3.xlarge"]
  
