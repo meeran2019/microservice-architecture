@@ -8,5 +8,5 @@ resource "aws_instance" "general-ec2" {
   instance_type = "t2.large"
   user_data = "${file("bootstrap.sh")}"
   iam_instance_profile = "${aws_iam_instance_profile.ec2profile.name}"
-  depends_on = [aws_eks_node_group.worker-node-group]
+#  depends_on = [aws_eks_node_group.worker-node-group]
 }
