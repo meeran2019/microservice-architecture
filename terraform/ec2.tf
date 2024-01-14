@@ -1,5 +1,5 @@
 resource "aws_iam_instance_profile" "ec2_profile" {
-  name = "ec2_profile"
+  name = "ec2_profile_1"
   role = "ec2role "
 }
 
