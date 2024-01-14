@@ -13,6 +13,11 @@ aws configure set aws_access_key_id ${access_key}
 aws configure set aws_secret_access_key ${secret_key}
 aws configure set default.region us-east-1
 aws configure set default.output json
+
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
 sudo yum update -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
