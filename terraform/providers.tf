@@ -1,11 +1,4 @@
 terraform {
-  cloud {
-	organization = "meeran-terraform-organization"
-	workspaces {
-  	name = "microservice-architecture"
-	}
-  }
-
   required_providers {
 	aws = {
   	source  = "hashicorp/aws"
@@ -15,11 +8,12 @@ terraform {
     }
   }
 }
+
 provider "aws" {
   region = "us-east-1"
+  access_key = var.access_key
+secret_key = var.secret_key 
 }
-
-
 
 provider "random" {
   # Configuration options
