@@ -1,5 +1,6 @@
 resource "aws_secretsmanager_secret" "master_password_secret" {
-  name = "master-password-secret"
+  name = "master-password-secret-1"
+  recovery_windows_in_days = 0
 }
 
 resource "aws_secretsmanager_secret_version" "master_password_version" {
