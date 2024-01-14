@@ -26,4 +26,4 @@ chmod +x ./kubectl
 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 kubectl version --client
-#aws eks update-kubeconfig --region us-east-1 --name eks-cluster
+aws eks update-kubeconfig --region us-east-1 --name eks-cluster
