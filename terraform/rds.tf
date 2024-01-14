@@ -1,7 +1,6 @@
 resource "aws_rds_cluster" "aurora_cluster" {
   cluster_identifier      = "aurora-cluster"
   engine                  = "aurora-postgresql"
-  engine_version          = "5.6.10a"
   master_username         = "admin"
   master_password         = random_password.password.result
   backup_retention_period = 7
@@ -17,6 +16,5 @@ resource "aws_rds_cluster_instance" "aurora_instance" {
   cluster_identifier  = aws_rds_cluster.aurora_cluster.id
   instance_class      = "db.t3.small"
   engine              = "aurora-postgresql"
-  engine_version      = "5.6.10a"
   publicly_accessible = false
 }
