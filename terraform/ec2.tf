@@ -1,6 +1,6 @@
 resource "aws_iam_instance_profile" "ec2_profile" {
   name = "ec2_profile"
-  role = "terraform-role "
+  role = "ec2role "
 }
 
 resource "aws_instance" "general-ec2" {
