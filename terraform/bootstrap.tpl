@@ -19,6 +19,10 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scrip
 chmod 700 get_helm.sh
 ./get_helm.sh
 
+# install in default namespace
+helm repo add argo https://argoproj.github.io/argo-helm
+helm install argocd argo/argo-cd
+
 sudo yum update -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
