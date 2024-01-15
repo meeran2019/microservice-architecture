@@ -10,6 +10,7 @@ resource "aws_instance" "general-ec2" {
   depends_on = [aws_eks_node_group.worker-node-group]
   user_data = templatefile("bootstrap.tpl", {
     access_key = var.access_key,
-    secret_key = var.secret_key
+    secret_key = var.secret_key,
+    KSM_IMAGE_VERSION = var.KSM_IMAGE_VERSION
   })
 }
