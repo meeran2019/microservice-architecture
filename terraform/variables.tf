@@ -23,3 +23,7 @@ variable "role-arn" {
  variable "secret_key" {
   type = string
  }
+
+variable "KSM_IMAGE_VERSIO" {
+  type = string
+ }
