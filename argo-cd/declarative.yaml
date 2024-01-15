@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: microservice-argo
+  namespace: default
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: helm
+    repoURL: 'https://github.com/meeran2019/microservice-architecture.git'
+    targetRevision: develop
+    helm:
+      valueFiles:
+        - dev_values.yaml
+      values: ''
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
