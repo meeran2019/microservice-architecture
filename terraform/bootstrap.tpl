@@ -23,6 +23,28 @@ chmod 700 get_helm.sh
 helm repo add argo https://argoproj.github.io/argo-helm
 helm install argocd argo/argo-cd
 
+#install newrelic
+KSM_IMAGE_VERSION="v2.10.0" && \
+helm repo add newrelic https://helm-charts.newrelic.com && helm repo update && \
+kubectl create namespace newrelic ; helm upgrade --install newrelic-bundle newrelic/nri-bundle \
+ --set global.licenseKey=83b2aFFFFNRAL \
+ --set global.cluster=eks-cluster \
+ --namespace=newrelic \
+ --set newrelic-infrastructure.privileged=true \
+ --set global.lowDataMode=true \
+ --set kube-state-metrics.image.tag=${KSM_IMAGE_VERSION} \
+ --set kube-state-metrics.enabled=true \
+ --set kubeEvents.enabled=true \
+ --set newrelic-prometheus-agent.enabled=true \
+ --set newrelic-prometheus-agent.lowDataMode=true \
+ --set newrelic-prometheus-agent.config.kubernetes.integrations_filter.enabled=false \
+ --set newrelic-pixie.enabled=true \
+ --set newrelic-pixie.apiKey=px-api--20293140d448 \
+ --set pixie-chart.enabled=true \
+ --set pixie-chart.deployKey=px-dep-18d80 \
+ --set pixie-chart.clusterName=eks-cluster \
+ --set newrelic-k8s-metrics-adapter.config.externalMetrics.manipulate_average_requests.query='FROM Metric SELECT average(http.server.duration) WHERE instrumentation.provider='pixie''
+
 sudo yum update -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
