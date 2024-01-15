@@ -1,0 +1,13 @@
+#Note: ArgoCD app name is used as release name
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+ name: {{ .Release.Name }}-hpa
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: {{ .Release.Name }}-nginx
+ minReplicas: 1
+ maxReplicas: 10
+ targetCPUUtilizationPercentage: 50
