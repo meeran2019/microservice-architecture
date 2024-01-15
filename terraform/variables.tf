@@ -24,6 +24,6 @@ variable "role-arn" {
   type = string
  }
 
-variable "KSM_IMAGE_VERSIO" {
+variable "KSM_IMAGE_VERSION" {
   type = string
  }
