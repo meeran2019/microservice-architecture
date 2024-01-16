@@ -15,7 +15,6 @@ spec:
         - name: backend
           image: {{ .Values.image2 }}
           imagePullPolicy: IfNotPresent
-          ports:
-            - name: http
-              containerPort: 80
+          ports:            
+            - containerPort: 8080
               sprotocol: TCP
