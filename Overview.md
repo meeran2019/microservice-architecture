@@ -27,4 +27,4 @@ Implement observability using tools like Prometheus for metrics, Grafana for vis
 
 ![Alt text](EKS.png)
 
-![Alt text](<CI CD Flow_v2.png>)
+![Alt text](<CI CD Flow_v2-2.png>)
