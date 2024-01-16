@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String buildVersion, String sonarPro, Object checkmarxpro, Object gitsPro, String jfrogPro, Object ECRPro, Object stageToggle, Object envPro){
+def call(String buildVersion, String sonarPro, Object checkmarxpro, Object gitPro, String jfrogPro, Object ECRPro, Object stageToggle, Object envPro){
 pipeline{
     agent{
         node {
