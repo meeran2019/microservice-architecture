@@ -106,7 +106,7 @@ pipeline{
                 steps{
                     sh 'docker login -u AWS -p $(aws ecr get-login-password --region us-east-1)'
                     sh 'docker build -t ecr-repo:${env.BUILD_NUMBER}' -f dockerfile-path 
-                    sh 'docker push ecr-repo:${version}'
+                    sh 'docker push ecr-repo:${buildVersion}'
                 }
             }
             stage('change manifest file '){
@@ -116,7 +116,7 @@ pipeline{
                 steps{
                     git credentialsId: GIT_CREDENTIALS_ID, url: 'https://github.com/meeran2019/microservice-architecture/tree/develop/helm'
                     sh """
-                        sed -i 's|image: .*|image: ecr-repo:${env.BUILD_NUMBER}|' ${env}/values.yaml
+                        sed -i 's|image: .*|image: ecr-repo:${buildVersion}|' ${env}/values.yaml
                     """
                     // Commit and push the changes
                     sh """
