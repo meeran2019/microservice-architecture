@@ -23,6 +23,8 @@ Utilize tools like Helm for managing Kubernetes applications and configuration. 
 Implement observability using tools like Prometheus for metrics, Grafana for visualization, and ELK stack (Elasticsearch, Logstash, Kibana) for log management. Set up alerts based on key performance indicators and use Kubernetes probes for application health checks.
 
 
-![Alt text](<CI CD Flow.png>)
+
 
 ![Alt text](EKS.png)
+
+![Alt text](<CI CD Flow_v2.png>)
