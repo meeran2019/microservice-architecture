@@ -1,0 +1,10 @@
+#!groovy
+
+buildVersion = "1.0.${env.BUILD_NUMBER}"
+env = dev
+
+stageToggle = [
+    publishtoECR = true
+]
+
+library identifier: ''
