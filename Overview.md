@@ -11,16 +11,19 @@ Kubernetes provides container orchestration, automatic scaling, and self-healing
 Infrastructure as code (IaC) tool helps to define infrastructure components, networking, and security in code which enables versioning, reproducibility, and easy modifications. Terraform is vendor neutral and support multiple providers.
 
 4. Microservice Deployment Strategy:
-Kubernetes which support recreate (have downtime) and rollingupdate deployment strategy. 
+Kubernetes by default which support recreate and rollingupdate deployment strategy. Using ArgoCD Rollout feature which supports Blue green and Canary deployment.
 
 5. Infrastructure Testing:
-Implement automated testing for infrastructure using tools like Terratest or Packer. Include unit tests, integration tests, and end-to-end tests for validating the infrastructure setup and deployment processes. Test the scalability of the infrastructure under varying loads.
+TFSec is a static analysis tool used to scan terraform code to identify and highlight gaps from security aspect from an infrastructure.
 
 6. Configuration Management:
-Utilize tools like Helm for managing Kubernetes applications and configuration. Store configuration values in Kubernetes ConfigMaps and Secrets. Ensure that the configuration is version-controlled along with the application code.
+Kubernetes ConfigMaps helps to store configuration values.
 
 7. Monitoring Approach:
-Implement observability using tools like Prometheus for metrics, Grafana for visualization, and ELK stack (Elasticsearch, Logstash, Kibana) for log management. Set up alerts based on key performance indicators and use Kubernetes probes for application health checks.
+New Relic is observability platform that provides solutions for Application Performance Monitoring, Infrastructure Monitoring and Log management. 
+New Relic Logs which send logs from EKS Cluster to New relic for centralized log management.
+Alert policies in New Relic used to notify any issues or anamolies in EKS environment.
+
 
 
 ![Alt text](<CI CD Flow_v2.png>)
