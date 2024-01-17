@@ -53,6 +53,7 @@ pipeline {
                 steps{
                     git credentialsId: GIT_CREDENTIALS_ID, url: 'https://github.com/meeran2019/microservice-architecture/tree/develop/helm'
                     sh """
+                        ce helm
                         sed -i 's|image: .*|image: ecr-repo:${buildVersion}|' ${env}/values.yaml
                     """
                     // Commit and push the changes

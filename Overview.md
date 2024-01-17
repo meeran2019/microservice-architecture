@@ -42,7 +42,7 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 - **Logging and Monitoring:** Cloud Watch, New Relic  
 - **Programming Language and YAML files:** Javascript, Java, Manifest file, Jenkinsfile, Dockerfile.
 
-## Continuos Integration Proccess:
+## CI CD Proccess:
 
 Continuos Integration process is managed by using Jenkins Pipeline to build, test, generate artifact, generate docker image, push to ECR and update manifest.
 
@@ -62,6 +62,7 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Once artifact jar and configuration files are generated, 'mvn clean deploy' will deploy into artifacts.
 - Dockerfile which contains instruction to generate the image. For ECR, use the AWS user and 'aws ecr get-login-password' to create the docker login. 'docker push' to push the imageinto ECR.
 - Update the latest image version in helm values.yaml file to reflect the latest image.
+- ArgoCD which is running in cluster will trigger the deployment.
 
 **For nodejs application:**
 - When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline. From github, source code is downloaded which includes Jenkinsfile and Dockerfile.
@@ -71,9 +72,7 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Once artifacts are generated, push the artifacts in to Jfrog with API call.
 - Dockerfile which contains instruction to generate the image. For ECR, use the AWS user and 'aws ecr get-login-password' to create the docker login. 'docker push' to push the imageinto ECR.
 - Update the latest image version in helm values.yaml file to reflect the latest image.
-
-
-
+- ArgoCD which is running in cluster will trigger the deployment.
 
 
 ![Alt text](EKS.png)
