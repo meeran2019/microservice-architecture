@@ -40,7 +40,7 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 - **Continuos Integration:** Jenkins    
 - **Continuos Delivery:** ArgoCD  
 - **Logging and Monitoring:** Cloud Watch, New Relic  
-- **Programming Language and YAML files:** Javascript, Java, Manifest file, Jenkinsfile, DOckerfile.
+- **Programming Language and YAML files:** Javascript, Java, Manifest file, Jenkinsfile, Dockerfile.
 
 --------------------------------------------------------------------------------------------
 
