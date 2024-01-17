@@ -1,4 +1,6 @@
+--------------------------------------------------------------------------------------------
 Designing and Implementing a Resilient and Scalable Platform for Microservice Architecture
+--------------------------------------------------------------------------------------------
 
 1. Infrastructure Platform Selection:
 Compare to Onprem which require investment in hardware and lack of ability to scale easily.
@@ -17,15 +19,15 @@ Kubernetes by default which support recreate and rollingupdate deployment strate
 TFSec is a static analysis tool used to scan terraform code to identify and highlight gaps from security aspect from an infrastructure.
 
 6. Configuration Management:
-Kubernetes ConfigMaps helps to store configuration values.
+Kubernetes ConfigMaps and secrets which helps to store configuration and secret values.
 
 7. Monitoring Approach:
 New Relic is observability platform that provides solutions for Application Performance Monitoring, Infrastructure Monitoring and Log management. 
-New Relic Logs which send logs from EKS Cluster to New relic for centralized log management.
+New Relic Logs which send logs from EKS Cluster to New relic for centralized log managesment.
 Alert policies in New Relic used to notify any issues or anamolies in EKS environment.
 
+--------------------------------------------------------------------------------------------
 
-
-![Alt text](<CI CD Flow_v2.png>)
+![Alt text](<CI CD Flow_v2.png >)
 
 ![Alt text](EKS.png)
