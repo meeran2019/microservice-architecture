@@ -4,7 +4,7 @@
 
 It is of 3 tier architecture which consists of front end, back end and database layer.
 
-### 1. Infrastructure Platform Selection:
+#### 1. Infrastructure Platform Selection:
 Compare to Onprem which require investment in hardware and lack of ability to scale easily.
 Cloud service AWS offer greater flexibility and wide range of managed services. It offers auto-scaling features that allow to automatically adjust the resources based on demand.
 
