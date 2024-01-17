@@ -1,30 +1,32 @@
+# templates/ingress.yaml
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
+  name: {{ .Release.Name }}-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   tls:
     - hosts:
-      - domain.com
-      secretName: tls-secret
+      - {{ .Values.domain }}
+      secretName: {{ .Values.tlsSecretName }}
   rules:
-    - host: domain.com
+    - host: {{ .Values.domain }}
       http:
         paths:
-          - path: /frontend
+          - path: {{ .Values.frontendPath }}
             pathType: Prefix
             backend:
               service:
-                name: frontend-service
+                name: {{ .Values.frontendServiceName }}
                 port:
                   number: 80
-          - path: /api
+          - path: {{ .Values.backendPath }}
             pathType: Prefix
             backend:
               service:
-                name: backend-service
+                name: {{ .Values.backendServiceName }}
                 port:
                   number: 8080

@@ -79,7 +79,12 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 
 ## Architecture Overview:
 
-Below architecture diagram gives the high level overview of the process and tools involved.
+Below architecture diagram gives the high level overview of the process and tools involved. 
+
+- AWS infrastructure including EKS and other services are created by using Terraform and scanned by TFSec for security check. 
+- ArgoCD is pull and gitops based CD tool used for deployment whenever changes in source repo which support kubernetes manifest, Helm manifest and Kustomize.
+- EKS resources are created and  by using HELM
+
 
 ![Alt text](EKS.png)
 

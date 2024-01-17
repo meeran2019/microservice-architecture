@@ -18,3 +18,10 @@ resources: {}
 nodeSelector: {}
 tolerations: []
 affinity: {}
+
+domain: domain.com
+tlsSecretName: my-tls-secret
+frontendPath: /frontend
+backendPath: /api
+frontendServiceName: frontend-service
+backendServiceName: backend-service
