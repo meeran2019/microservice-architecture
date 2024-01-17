@@ -115,8 +115,12 @@ Terraform is vendor neutral and support multiple providers. It consists of open 
 - Utilize workspace to maintain the different variables depends upon the environment.
 - In EC2, install the terraform through userdata or use the terraform cloud.
 - From CLI or through Jenkins, run the command "terraform init/validate/plan/apply" to create the infrastructure.
+- For code snippet, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/terraform
 
 ### ArgoCD:
+Argo CD is declarative, GitOps continuos delivery tool for kubernetes.
+
+- 
 
 ### AWS Cloud:
 
