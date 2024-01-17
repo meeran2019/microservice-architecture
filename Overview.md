@@ -1,6 +1,6 @@
 # Designing and Implementing a Resilient and Scalable Platform for Microservice Architecture
 
-## Solution Overview:
+### Solution Overview:
 
 It is 3 tier architecture which consists of front end, back end and database layer.
 
@@ -28,15 +28,8 @@ New Relic is observability platform that provides solutions for Application Perf
 New Relic Logs which send logs from EKS Cluster to New relic for centralized log managesment.
 Alert policies in New Relic used to notify any issues or anamolies in EKS environment.
 
-## Tools and Technologies Used:
-AWS Cloud
-Terraform
-Docker
-Kubernets
-Jenkins
-Helm
-ArgoCD
-
+### Tools and Technologies Used:
+AWS Cloud, Terraform, Docker, Kubernets, Jenkins, Helm, ArgoCD, New relic, Cloudwatch
 
 --------------------------------------------------------------------------------------------
 
