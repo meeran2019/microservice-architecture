@@ -138,5 +138,10 @@ It consists of different services from VPC, Region, Availability zone, Public su
 - EC2 is created which contains necessary software agent like Kubectl, Helm, New Relic, ArgoCD and Jenkins.
 - For security, NACL and Security group allows only from specific IPs and security groups.
 
-
 ### New Relic:
+It support both onprem and multi cloud and to use as centralized logging and monitoring solution.
+
+- New relic account to be opened.
+- New relic agent to install in kubernetes.
+- It get authenticated by cient id and secret.
+- It takes few minutes to reflect logs in new relic dashboard.
