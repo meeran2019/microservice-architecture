@@ -2,7 +2,7 @@
 
 ## Solution Overview:
 
-It is of 3 tier architecture which consists of front end, back end and database layer.
+It is 3 tier architecture which consists of front end, back end and database layer.
 
 #### 1. Infrastructure Platform Selection:
 Compare to Onprem which require investment in hardware and lack of ability to scale easily.
@@ -27,6 +27,16 @@ Kubernetes ConfigMaps and secrets which helps to store configuration and secret 
 New Relic is observability platform that provides solutions for Application Performance Monitoring, Infrastructure Monitoring and Log management. 
 New Relic Logs which send logs from EKS Cluster to New relic for centralized log managesment.
 Alert policies in New Relic used to notify any issues or anamolies in EKS environment.
+
+## Tools and Technologies Used:
+AWS Cloud
+Terraform
+Docker
+Kubernets
+Jenkins
+Helm
+ArgoCD
+
 
 --------------------------------------------------------------------------------------------
 
