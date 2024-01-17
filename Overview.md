@@ -49,20 +49,19 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Install Jenkins in EC2 with master and slave architecture.
 - Use multiple slave nodes to select agent with the help of labels.
 - Jenkins pipeline support declarative and scripted pipeline.
-- Create the shared library depending upon the technologies used.
+- Create the shared library for the java and nodejs application.
 - Shared library will call dynamically from Jenkinsfile.
 
 ![Alt text](<CI CD Flow_v2.png >)
 
 **For Java applications:**  
-- When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline.
-- From github, source code is downloaded which includes Jenkinsfile, pom.xml and Dockerfile.
-- pom.xml which defines the dependencies, plugins and build settings for sonarqube, jfrog.
-- 'mvn clean install' will validate, compile, test and deploy into local m2 repository.
-- Sonarqube stage which is used to check the code quality and waitforqualitygate report.
+- When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline. From github, source code is downloaded which includes Jenkinsfile, pom.xml and Dockerfile.
+- pom.xml which defines the dependencies, plugins and build settings for sonarqube, jfrog. 'mvn clean install' will validate, compile, test and deploy into local m2 repository.
+- Sonarqube stage which is used to check the code quality to adherence to coding standard and waitforqualitygate report. 
 - Checkmarx stage used to check vulnarabilities to analyze common issues like SQL Injection, Cross site scripting and other vulnarabilities.
 - Once artifact jar and configuration files are generated, 'mvn clean deploy' will deploy into artifacts.
-- Dockerfile which contains instruction 
+- Dockerfile which contains instruction to generate the image. For ECR, use the AWS user and 'aws ecr get-login-password' to create the docker login. 'docker push' to push the imageinto ECR.
+
 
 
 For nodejs application: 
