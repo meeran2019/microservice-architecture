@@ -74,7 +74,16 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Update the latest image version in helm values.yaml file to reflect the latest image.
 - ArgoCD which is running in cluster will trigger the deployment.
 
-## EKS Architecture Overview:
-In AWS EKS, the architecture consists of two main components – the control plane and the data plane – that work together to provide a highly available, scalable, and secure platform. The control plane manages the overall state of the Kubernetes cluster, while the data plane runs the workloads on the cluster
+## Architecture Overview:
+
 
 ![Alt text](EKS.png)
+
+### EKS Architecture:
+
+### Terraform and TFSec
+
+### ArgoCD
+
+### AWS Cloud
+
