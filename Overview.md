@@ -30,7 +30,7 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 
 ## Tools and Technologies Used:
 **Infrastructure:**         AWS Cloud, EKS, Cloudwatch, RDS Aurora, EC2, ELB
-Source Code Management: Git, GitHub
+**Source Code Management:** Git, GitHub
 Continuos Integration:  Jenkins
 
 AWS Cloud, Terraform, Docker, Kubernets, Jenkins, Helm, ArgoCD, New relic, Cloudwatch
