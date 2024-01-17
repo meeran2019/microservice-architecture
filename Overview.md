@@ -145,3 +145,4 @@ It support both onprem and multi cloud and to use as centralized logging and mon
 - New relic agent to install in kubernetes.
 - It get authenticated by cient id and secret.
 - It takes few minutes to reflect logs in new relic dashboard.
+- For code snippet, refer https://github.com/meeran2019/microservice-architecture/blob/develop/terraform/bootstrap.tpl
