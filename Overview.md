@@ -64,6 +64,7 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Dockerfile which contains instruction to generate the image. For ECR, use the AWS user and 'aws ecr get-login-password' to create the docker login. 'docker push' to push the imageinto ECR.
 - Update the latest image version in helm values.yaml file to reflect the latest image.
 - ArgoCD which is running in cluster will trigger the deployment.
+- For code repo, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/spring-boot-backend-code which contains the Dockerfile and Jenkinsfile.
 
 **For nodejs application:**
 - When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline. From github, source code is downloaded which includes Jenkinsfile and Dockerfile.
@@ -74,6 +75,7 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Dockerfile which contains instruction to generate the image. For ECR, use the AWS user and 'aws ecr get-login-password' to create the docker login. 'docker push' to push the imageinto ECR.
 - Update the latest image version in helm values.yaml file to reflect the latest image.
 - ArgoCD which is running in cluster will trigger the deployment.
+- For code repo, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/react-frontend-code which contains the Dockerfile and Jenkinsfile.
 
 ## Architecture Overview:
 

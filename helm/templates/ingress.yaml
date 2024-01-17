@@ -2,23 +2,29 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress
-  namespace: namespace
   annotations:
-    kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
+  tls:
+    - hosts:
+      - domain.com
+      secretName: tls-secret
   rules:
-    - host: app.example.com
+    - host: domain.com
       http:
         paths:
-          - path: /
+          - path: /frontend
             pathType: Prefix
             backend:
               service:
-                name: app-service
+                name: frontend-service
                 port:
                   number: 80
-  tls:
-    - hosts:
-        - app.example.com
-      secretName: tls-secret
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-service
+                port:
+                  number: 8080
