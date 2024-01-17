@@ -57,10 +57,12 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 **For Java applications:**  
 - When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline.
 - From github, source code is downloaded which includes Jenkinsfile, pom.xml and Dockerfile.
-- pom.xml which defines the dependencies, plugins and build settings.
+- pom.xml which defines the dependencies, plugins and build settings for sonarqube, jfrog.
 - 'mvn clean install' will validate, compile, test and deploy into local m2 repository.
 - Sonarqube stage which is used to check the code quality and waitforqualitygate report.
-- 
+- Checkmarx stage used to check vulnarabilities to analyze common issues like SQL Injection, Cross site scripting and other vulnarabilities.
+- Once artifact jar and configuration files are generated, 'mvn clean deploy' will deploy into artifacts.
+- Dockerfile which contains instruction 
 
 
 For nodejs application: 
