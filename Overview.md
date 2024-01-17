@@ -44,7 +44,11 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 
 ## CI CD Proccess:
 
+Continuos Integration process is managed by using Jenkins Pipeline to build, test, generate and push to artifact, generate docker image and push to ECR.
 
+For Java applications:
+
+For nodejs application: 
 
 
 ![Alt text](<CI CD Flow_v2.png >)
