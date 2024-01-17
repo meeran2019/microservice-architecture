@@ -83,8 +83,11 @@ Below architecture diagram gives the high level overview of the process and tool
 
 - AWS infrastructure including EKS and other services are created by using Terraform and scanned by TFSec for security check. 
 - ArgoCD is pull and gitops based CD tool used for deployment whenever changes in source repo which support kubernetes manifest, Helm manifest and Kustomize.
-- EKS resources are created and  by using HELM
-
+- For monitoring, Cloudwatch is natively support in AWS and easy integration with EKS. New Relic gives the  dashboard and support both onprem and cloud.
+- Kubernetes resource objects like deployment, service are created and templatized using HELM.
+- For front end and backend application, deployed using deployment and exposed through service
+- Services are exposed through ingress and access by external customer.
+- For database, AWS Aurora provides 5 time faster than postgresql.
 
 ![Alt text](EKS.png)
 
