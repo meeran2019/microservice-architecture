@@ -51,6 +51,7 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Jenkins pipeline support declarative and scripted pipeline.
 - Create the shared library for the java and nodejs application.
 - Shared library will call dynamically from Jenkinsfile.
+- For code repo, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/jenkins
 
 ![Alt text](<CI CD Flow_v2.png >)
 
@@ -79,7 +80,7 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 
 ![Alt text](EKS.png)
 
-### EKS Architecture:
+### Elastic Kubernets Service(EKS):
 
 ### Terraform and TFSec
 
