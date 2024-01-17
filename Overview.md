@@ -93,10 +93,18 @@ Below architecture diagram gives the high level overview of the process and tool
 
 ### Elastic Kubernets Service(EKS):
 
+Amazon Elastic Kubernetes Service (EKS) is AWS managed service that scales, manages and deploy containerized applications. It runs across AZ for high availability. It consists of a control plane and data plane components (worker nodes). It comes with add on like VPC CNI, EBS, EFS, Core DNS for integration with other services.  
+
+- Kubernetes cluster and worker nodes are provisioned using terraform.
+- CLI 'kubectl' is installed on the EC2 to interact with cluster and update the kube config by using 'aws eks update-kubeconfig --region us-east-1 --name eks-cluster' 
+- Security group is used to allow only inbound traffic for worker nodes.
+- 
+
+
 ### Terraform and TFSec:
 
 ### ArgoCD:
 
 ### AWS Cloud:
 
-### CLoud Watch and New Relic:
+### New Relic:
