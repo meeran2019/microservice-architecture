@@ -42,7 +42,7 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 - **Logging and Monitoring:** Cloud Watch, New Relic  
 - **Programming Language and YAML files:** Javascript, Java, Manifest file, Jenkinsfile, Dockerfile.
 
-## CI CD Proccess:
+## Continuos Integration Proccess:
 
 Continuos Integration process is managed by using Jenkins Pipeline to build, test, generate artifact, generate docker image, push to ECR and update manifest.
 
@@ -61,10 +61,17 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Checkmarx stage used to check vulnarabilities to analyze common issues like SQL Injection, Cross site scripting and other vulnarabilities.
 - Once artifact jar and configuration files are generated, 'mvn clean deploy' will deploy into artifacts.
 - Dockerfile which contains instruction to generate the image. For ECR, use the AWS user and 'aws ecr get-login-password' to create the docker login. 'docker push' to push the imageinto ECR.
+- Update the latest image version in helm values.yaml file to reflect the latest image.
 
+**For nodejs application:**
+- When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline. From github, source code is downloaded which includes Jenkinsfile and Dockerfile.
+- 'npm run lint' and 'npm run build' are used to generate the artifacts.
+- Sonarqube stage which is used to check the code quality to adherence to coding standard and waitforqualitygate report. 
+- Checkmarx stage used to check vulnarabilities to analyze common issues like SQL Injection, Cross site scripting and other vulnarabilities.
+- Once artifacts are generated, push the artifacts in to Jfrog with API call.
+- Dockerfile which contains instruction to generate the image. For ECR, use the AWS user and 'aws ecr get-login-password' to create the docker login. 'docker push' to push the imageinto ECR.
+- Update the latest image version in helm values.yaml file to reflect the latest image.
 
-
-For nodejs application: 
 
 
 
