@@ -78,5 +78,3 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 
 
 ![Alt text](EKS.png)
-
-<img src="EKS.png" width="700" height="700">
