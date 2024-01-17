@@ -1,6 +1,6 @@
---------------------------------------------------------------------------------------------
-** Designing and Implementing a Resilient and Scalable Platform for Microservice Architecture **
---------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+**Designing and Implementing a Resilient and Scalable Platform for Microservice Architecture**
+-----------------------------------------------------------------------------------------------
 
 1. Infrastructure Platform Selection:
 Compare to Onprem which require investment in hardware and lack of ability to scale easily.
