@@ -52,17 +52,20 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Create the shared library depending upon the technologies used.
 - Shared library will call dynamically from Jenkinsfile.
 
+![Alt text](<CI CD Flow_v2.png >)
+
 **For Java applications:**  
 - When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline.
 - From github, source code is downloaded which includes Jenkinsfile, pom.xml and Dockerfile.
 - pom.xml which defines the dependencies, plugins and build settings.
 - 'mvn clean install' will validate, compile, test and deploy into local m2 repository.
+- Sonarqube stage which is used to check the code quality and waitforqualitygate report.
 - 
 
 
 For nodejs application: 
 
 
-![Alt text](<CI CD Flow_v2.png >)
+
 
 ![Alt text](EKS.png)
