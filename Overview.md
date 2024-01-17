@@ -118,9 +118,13 @@ Terraform is vendor neutral and support multiple providers. It consists of open 
 - For code snippet, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/terraform
 
 ### ArgoCD:
-Argo CD is declarative, GitOps continuos delivery tool for kubernetes.
-
-- 
+Argo CD is declarative, GitOps continuos delivery tool for kubernetes. It pull the code directly from Git source and deploy it directly into kubernetes. It support CLI, UI and YAM file.  
+- Install the argocd using userdata. It uses kube config current context for authentication.
+- It consists of source where the kubernetes manifest or helm template contains and destination where the kubernetes cluster to deploy.
+- It support autoprune and self heal to sych with repo and auto update the resource if manually updated.
+- Whenever helm repo is updated, based on reconcillation_timout, it detect the changes and do the deployment.
+- ArgoCD Rollout is CRD which support blue green and canary deployments.
+- For code snippet, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/argo-cd
 
 ### AWS Cloud:
 
