@@ -98,7 +98,12 @@ Amazon Elastic Kubernetes Service (EKS) is AWS managed service that scales, mana
 - Kubernetes cluster and worker nodes are provisioned using terraform.
 - CLI 'kubectl' is installed on the EC2 to interact with cluster and update the kube config by using 'aws eks update-kubeconfig --region us-east-1 --name eks-cluster' 
 - Security group is used to allow only inbound traffic for worker nodes.
-- 
+- Kubernetes resources are templatized and managed by using Helm.
+- Create the kubernetes resources like deployment, service, ingress etc to deploy the application.
+- For database credentials, secret manager is used to get the credentials.
+- Horizontal Pod Autoscaler (HPA) resource is used to increase or decrease the replica based on the load.
+- Give the pod level permission to access the AWS resources.
+- Ingress resource is used to route the traffic based on the host and path.
 
 
 ### Terraform and TFSec:
