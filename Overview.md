@@ -1,5 +1,7 @@
 # Designing and Implementing a Resilient and Scalable Platform for Microservice Architecture
 
+## Solution Overview:
+
 It is of 3 tier architecture which consists of front end, back end and database layer.
 
 1. Infrastructure Platform Selection:
