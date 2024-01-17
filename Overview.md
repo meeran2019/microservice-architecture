@@ -42,7 +42,10 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 - **Logging and Monitoring:** Cloud Watch, New Relic  
 - **Programming Language and YAML files:** Javascript, Java, Manifest file, Jenkinsfile, Dockerfile.
 
---------------------------------------------------------------------------------------------
+## CI CD Proccess:
+
+
+
 
 ![Alt text](<CI CD Flow_v2.png >)
 
