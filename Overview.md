@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------
-Designing and Implementing a Resilient and Scalable Platform for Microservice Architecture
+** Designing and Implementing a Resilient and Scalable Platform for Microservice Architecture **
 --------------------------------------------------------------------------------------------
 
 1. Infrastructure Platform Selection:
