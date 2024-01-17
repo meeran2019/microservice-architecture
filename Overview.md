@@ -134,7 +134,9 @@ It consists of different services from VPC, Region, Availability zone, Public su
 - Route 53 is DNS service which helps to map custom domain name with ELB URL.
 - ELB is created as part of ingress controller. From Ingress resource, route traffic to backend resource.
 - For EKS, number of nodes can be adjusted based on autoscaling group.
-- 
+- Multi AZ helps to achieve high availability.
+- EC2 is created which contains necessary software agent like Kubectl, Helm, New Relic, ArgoCD and Jenkins.
+- For security, NACL and Security group allows only from specific IPs and security groups.
 
 
 ### New Relic:
