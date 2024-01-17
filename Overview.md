@@ -104,9 +104,12 @@ Amazon Elastic Kubernetes Service (EKS) is AWS managed service that scales, mana
 - Horizontal Pod Autoscaler (HPA) resource is used to increase or decrease the replica based on the load.
 - Give the pod level permission to access the AWS resources.
 - Ingress resource is used to route the traffic based on the host and path.
-
+- For code snippet, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/helm
 
 ### Terraform and TFSec:
+Terraform is vendor neutral and support multiple providers. It consists of open source, enterprise and cloud based. For cloud based, no need of manage state file and handled by cloud itself. For other, require to integrate with S3 and DynamoDB to maintain state file locking. For cloud, secrets can be passed as sensitive variable. For other, need to integrate with Vault or other secret solutions.  
+
+- 
 
 ### ArgoCD:
 
