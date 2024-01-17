@@ -29,15 +29,8 @@ New Relic Logs which send logs from EKS Cluster to New relic for centralized log
 Alert policies in New Relic used to notify any issues or anamolies in EKS environment.
 
 ## Tools and Technologies Used:
-**Infrastructure:**
-- AWS Cloud
-- EKS (Elastic Kubernetes Service)
-- CloudWatch
-- RDS Aurora
-- EC2 (Elastic Compute Cloud)
-- ELB (Elastic Load Balancer)
 
-
+- **Infrastructure:**         AWS Cloud, EKS, Cloudwatch, RDS Aurora, EC2, ELB
 - **Source Code Management:** Git, GitHub  
 Continuos Integration:  Jenkins
 
