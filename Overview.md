@@ -119,7 +119,7 @@ Terraform is vendor neutral and support multiple providers. It consists of open 
 
 ### ArgoCD:
 Argo CD is declarative, GitOps continuos delivery tool for kubernetes. It pull the code directly from Git source and deploy it directly into kubernetes. It support CLI, UI and YAM file.  
-- Install the argocd using userdata. It uses kube config current context for authentication.
+- Install the argocd using userdata.
 - It consists of source where the kubernetes manifest or helm template contains and destination where the kubernetes cluster to deploy.
 - It support autoprune and self heal to sych with repo and auto update the resource if manually updated.
 - Whenever helm repo is updated, based on reconcillation_timout, it detect the changes and do the deployment.
@@ -127,5 +127,14 @@ Argo CD is declarative, GitOps continuos delivery tool for kubernetes. It pull t
 - For code snippet, refer the https://github.com/meeran2019/microservice-architecture/tree/develop/argo-cd
 
 ### AWS Cloud:
+It consists of different services from VPC, Region, Availability zone, Public subnet, Private subnet, ELB, Route53, Secret manager, Aurora database, IAM. 
+
+- Amazon Aurora is fully managed database engine compatible with PostgreSQL and gives 3x performance compare to normal postgresql. It support multi AZ for high availability and data encryption at rest and intransit. 
+- Secret manager is used to store database credentials and to access from POD.
+- Route 53 is DNS service which helps to map custom domain name with ELB URL.
+- ELB is created as part of ingress controller. From Ingress resource, route traffic to backend resource.
+- For EKS, number of nodes can be adjusted based on autoscaling group.
+- 
+
 
 ### New Relic:
