@@ -30,21 +30,17 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 
 ## Tools and Technologies Used:
 
-- **Infrastructure:** AWS Cloud, VPC, EKS, Cloudwatch, RDS Aurora, EC2, ELB
+- **Infrastructure:** AWS Cloud, VPC, EKS, Cloudwatch, RDS Aurora, EC2, ELB  
 - **Source Code Management:** Git, GitHub  
-- **Infrastructure as Code:** Terraform  
+- **Infrastructure as Code:** Terraform, TFSec  
 - **Operating System:** Linux  
-- **Containarization:** Docker
+- **Containarization:** Docker  
 - **Container Orchestration:** EKS  
-- **Container Package Manager:** HELM 
-- **Continuos Integration:** Jenkins  
-- **Continuos Delivery:** ArgoCD
-- **Logging and Monitoring:** Cloud Watch, New Relic
-
-
-
-
-AWS Cloud, Terraform, Docker, Kubernets, Jenkins, Helm, ArgoCD, New relic, Cloudwatch
+- **Package Manager:** Helm  
+- **Continuos Integration:** Jenkins    
+- **Continuos Delivery:** ArgoCD  
+- **Logging and Monitoring:** Cloud Watch, New Relic  
+- **Programming Language and YAML files:** Javascript, Java, Manifest file, Jenkinsfile, DOckerfile.
 
 --------------------------------------------------------------------------------------------
 
