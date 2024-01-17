@@ -109,6 +109,9 @@ Amazon Elastic Kubernetes Service (EKS) is AWS managed service that scales, mana
 ### Terraform and TFSec:
 Terraform is vendor neutral and support multiple providers. It consists of open source, enterprise and cloud based. For cloud based, no need of manage state file and handled by cloud itself. For other, require to integrate with S3 and DynamoDB to maintain state file locking. For cloud, secrets can be passed as sensitive variable. For other, need to integrate with Vault or other secret solutions.  
 
+- In EC2, install the terraform through userdata or use the terraform cloud.
+- From CLI or through Jenkins, run the command "terraform init/validate/plan/apply" to create the infrastructure.
+- TFSec is security scanning on code and gives recommendation on any open port used or unencryped etc.
 - 
 
 ### ArgoCD:
