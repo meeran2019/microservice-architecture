@@ -46,8 +46,16 @@ Alert policies in New Relic used to notify any issues or anamolies in EKS enviro
 
 Continuos Integration process is managed by using Jenkins Pipeline to build, test, generate artifact, generate docker image, push to ECR and update manifest.
 
+- Install Jenkins in EC2 with master and slave architecture.
+- Use multiple slave nodes to select agent with the help of labels.
+- Jenkins pipeline support declarative and scripted pipeline.
+- Create the shared library depending upon the technologies used.
+- Shared library will call dynamically from Jenkinsfile.
+
+
 **For Java applications:**  
-When developer push the code to Github, with the help of webhook, it will trigger the jenkni
+- When developer push the code to Github, with the help of webhook, it will trigger the jenkins pipeline.
+- 
 
 
 For nodejs application: 
