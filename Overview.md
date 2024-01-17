@@ -74,5 +74,9 @@ Continuos Integration process is managed by using Jenkins Pipeline to build, tes
 - Update the latest image version in helm values.yaml file to reflect the latest image.
 - ArgoCD which is running in cluster will trigger the deployment.
 
+## EKS Architecture Overview:
+
 
 ![Alt text](EKS.png)
+
+<img src="EKS.png" width="100" height="100">
