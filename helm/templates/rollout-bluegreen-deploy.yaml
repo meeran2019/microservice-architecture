@@ -16,6 +16,8 @@ spec:
       release: {{ .Release.Name }}
   strategy:
     blueGreen:
+    # active service is stable version of application.
+    # previewservice is new version of application.
       activeService: {{ template "helm-guestbook.fullname" . }}
       previewService: {{ template "helm-guestbook.fullname" . }}-preview
   template:

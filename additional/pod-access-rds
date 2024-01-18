@@ -1,0 +1,7 @@
+
+1. Create an IAM policy with read/write permission to DB.
+2. Creata an IAM role and attach that policy.
+3. Create a service account with role (Mention role in annotation)
+4. Assign service account to POD.
+5. To add the SG of the EKS cluster to the inbound rules of the RDS.
+
