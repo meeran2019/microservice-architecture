@@ -1,6 +1,7 @@
 1. With jenkins pipeline, execute the below command
 
 #+e - script will not end abruptly.
+#+x - to turnoff debug mode.
 #--run-statustics - view statistics table of current findings.
 
 set +e 
