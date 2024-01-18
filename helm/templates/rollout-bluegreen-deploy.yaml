@@ -1,3 +1,6 @@
+# It is having pre and post deployment analysis template for validation.
+# activeservice is stable version of application. previewservice is new version of application.
+
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
