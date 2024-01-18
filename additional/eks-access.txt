@@ -1,0 +1,40 @@
+## Procedure to give access. 
+
+1. Create a kubernetes Role.
+2. Create a service account.
+3. Create a kubernetes Role Binding.
+4. Create an IAM role (trust relationship with account) with policy "AmazonEKSClusterPolicy"
+5. In service account, attach the annotation with IAM role.
+6. kubectl -n kube-system get configmap aws-auth -o yaml > aws-auth.yaml
+7. add below in aws-auth configmap.
+mapUsers: |
+— userarn: arn:aws:iam::<Account-id>:user/<User-name>
+username: <User-name>
+groups:
+— system:masters
+
+8. aws eks update-kubeconfig — region <region> — name <name-of-your-cluster> — profile <aws-profile>
+
+system:masters -> Cluster admin 
+
+
+# aws-auth-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+data:
+  mapRoles: |
+    - rolearn: <ARN-of-IAM-role>
+      username: system:node:{{EC2PrivateDNSName}}
+      groups:
+        - system:bootstrappers
+        - system:nodes
+
+    mapUsers: |
+    —   userarn: arn:aws:iam::<Account-id>:user/<User-name>
+        username: <User-name>
+        groups:
+        — system:masters
+
