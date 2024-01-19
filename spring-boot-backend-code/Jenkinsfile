@@ -1,0 +1,38 @@
+#!groovy
+
+buildVersion = '${majorMinorVersion}.${env.BUILD_NUMBER}'
+
+checkmarxpro = [
+    checkMarxProjectName: 'project-name',
+    checkMarxgroupId: '123',
+    checkMarxServerURL: 'https://checkmarx-url'
+]
+
+envPro = [
+    mavenVersion: 'Maven_3.4.3',
+    jdkVersion: 'jdk-17.0.1',
+    env: 'dev'
+]
+
+gitPro = [
+    gitUrl: 'https://git-url',
+    gitProjectBranch: "${gitBranchToBuild}",
+]
+
+stageToggle = [
+    generateSite: false
+    sonarQualityCheck: true
+    checkmarxAnalysis: true
+    pushToECR: true
+
+]
+
+library identifier: 'java-shared-library@master',
+retriever: modernSCN([
+    $class: 'GitSCMSource',
+    credentialsId: gitPro.gitCredentials
+    remote: 'https://github.com/meeran2019/microservice-architecture/tree/develop/jenkins/java-shared-library'
+    traits: [gitBranchDiscovery]
+])
+
+bootstrap(buildVersion, sonarPro, checkmarxpro, gitPro, jfrogPro, stageToggle, envPro)

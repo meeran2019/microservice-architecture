@@ -1,0 +1,27 @@
+image1: nginx:1.16.0
+
+image:
+  repository: gcr.io/heptio-images/ks-guestbook-demo
+  tag: 0.1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: false
+  annotations: {}
+hosts:
+    - chart-example.local
+tls: []
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+domain: domain.com
+tlsSecretName: my-tls-secret
+frontendPath: /frontend
+backendPath: /api
+frontendServiceName: frontend-service
+backendServiceName: backend-service

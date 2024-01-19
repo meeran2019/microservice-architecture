@@ -1,0 +1,16 @@
+1. With jenkins pipeline, execute the below command
+
+#+e - script will not end abruptly.
+#+x - to turnoff debug mode.
+#--run-statustics - view statistics table of current findings.
+
+set +e 
+echo "start tfscan ${BUILD_TAG}"
+tfsec --version
+tfsec --help
+tfsec . --run-statistics
+tfsec . --format csv --out "${BUILD_TAG}.csv"
+status=$?
+echo "tdscan ends"
+exit $status 
+

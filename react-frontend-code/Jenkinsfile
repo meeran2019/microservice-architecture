@@ -1,0 +1,18 @@
+#!groovy
+
+buildVersion = "1.0.${env.BUILD_NUMBER}"
+env = dev
+
+stageToggle = [
+    publishtoECR = true
+]
+
+library identifier: 'js-shared-library@master',
+retriever: modernSCM([
+    $class: "GitSCMSource",
+    credentialsId: gitProperties.gitcredentials,
+    remote: 'https://github.com/meeran2019/microservice-architecture/tree/develop/jenkins/js-shared-library',
+    traits: [gitBranchDiscovery()]
+])
+
+bootstrap(buildVersion, gitProperties, stageToggle, env)
